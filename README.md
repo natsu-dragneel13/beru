@@ -1,35 +1,43 @@
-# KURUMIBOT
-![KURUMI Chan](https://telegra.ph/file/e86cbb3e4a413f36c5aae.jpg)
-# KURUMI Chan
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)!]
+![BERU](https://cdnb.artstation.com/p/assets/images/images/031/557/425/medium/kirt-victor-1beru-wp-computer-lq.jpg?1603954203) 
+# BERU
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6141417ceaf84545bab6bd671503df51)](https://app.codacy.com/gh/AnimeKaizoku/SaitamaRobot?utm_source=github.com&utm_medium=referral&utm_content=AnimeKaizoku/SaitamaRobot&utm_campaign=Badge_Grade_Settings)  [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://perso.crans.org/besson/LICENSE.html) [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com) [![Updates channel!](https://img.shields.io/badge/Join%20Channel-!-red)](https://t.me/BERUBOT_SUPPORT)
 
 
-A modular Telegram Group Management bot made using [KURUMI Chan](https://t.me/kurumi_tokisaki_00_bot) as base repo.
+A modular Telegram Python bot running on python3 with a sqlalchemy database.
 
-Can be found on telegram as [KURUMI Chan](https://t.me/kurumi_tokisaki_00_bot).
+Originally a Marie fork, BERU evolved further and was built to be more robust and more dedicated to Anime Chats. 
 
-The Support group can be reached out to at [KURUMI Support](https://t.me/kurumi_BOT_SUPPORT), where you can ask for help about [KURUMI Chan](https://t.me/kurumi_tokisaki_00_bot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+Can be found on telegram as [BERU ROBOT](https://t.me/BERU_MA_BOT).
+
+The Support group can be reached out to at [BERU SUPPORT](https://t.me/BERU_BOT_SUPPORT), where you can ask for help about [BERUBOT](https://t.me/BERU_MA_BOT),discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
+
+
 
 ## How to setup/deploy.
 
 ### Read these notes carefully before proceeding 
- - Your code must be open source and a link to your fork's repository must be there in the start reply of the bot.
+
+ - Your code must be open source and a link to your fork's repository must be there in the start reply of the bot. [See this](https://github.com/natsu-dragneel13/BERU_MA_BOT/blob/shiken/SaitamaRobot/__main__.py#L25)
+ - Lastly, if you are found to run this repo without the code being open sourced or the repository link not mentioned in the bot, we will push a gban for you in our network because of being in violation of the license, you are free to be a dick and not respect the open source code (we do not mind) but we will not be having you around our chats.
+
 
 <details>
-  <summary>Steps to deploy on Heroku !!</summary>
+  <summary>Steps to deploy on Heroku !! </summary>
 
 ```
 Fill in all the details, Deploy!
 Now go to https://dashboard.heroku.com/apps/(app-name)/resources ( Replace (app-name) with your app name )
-REMEMBER: Turn on worker dyno (Don't worry It's free :D) & Webhook
+Turn on worker dyno (Don't worry It's free :D) & Webhook
 Now send the bot /start, If it doesn't respond go to https://dashboard.heroku.com/apps/(app-name)/settings and remove webhook and port.
 ```
 
-  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/natsu-dragneel13/KURUMI.git)
+  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/natsu-dragneel13/BERU) 
 
 </details>  
 <details>
   <summary>Steps to self Host!! </summary>
+
+Note: This instruction set is just a copy-paste from Marie, note that [One Punch Support](https://t.me/OnePunchSupport) aims to handle support for @SaitamaRobot and not how to set up your own fork. If you find this bit confusing/tough to understand then we recommend you ask a dev, kindly avoid asking how to set up the bot instance in the support chat, it aims to help our own instance of the bot and not the forks.
 
   ## Setting up the bot (Read this before trying to use!):
 Please make sure to use python3.6, as I cannot guarantee everything will work as expected on older Python versions!
@@ -40,31 +48,59 @@ This is because markdown parsing is done by iterating through a dict, which is o
 There are two possible ways of configuring your bot: a config.py file, or ENV variables.
 
 The preferred version is to use a `config.py` file, as it makes it easier to see all your settings grouped together.
-This file should be placed in your `SungJinWoo` folder, alongside the `__main__.py` file. 
-This is where your bot token will be loaded from, as well as your database URI (if you're using a database), and most of
+This file should be placed in your `SaitamaRobot` folder, alongside the `__main__.py` file. 
+This is where your bot token will be loaded from, as well as your database URI (if you're using a database), and most of 
 your other settings.
 
-It is recommended to import sample_config and extend the Config class, as this will ensure your config contains all
+It is recommended to import sample_config and extend the Config class, as this will ensure your config contains all 
 defaults set in the sample_config, hence making it easier to upgrade.
 
 An example `config.py` file could be:
 ```
-from KURUMIBOT.sample_config import Config
+from SaitamaRobot.sample_config import Config
 
 class Development(Config):
-    OWNER_ID = 1304672022  # your telegram ID
-    OWNER_USERNAME = "CAT_Bot_01"  # your telegram username
+    OWNER_ID = 254318997  # your telegram ID
+    OWNER_USERNAME = "SonOfLars"  # your telegram username
     API_KEY = "your bot api key"  # your api key, as provided by the @botfather
     SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
     JOIN_LOGGER = '-1234567890' # some group chat that your bot is a member of
     USE_JOIN_LOGGER = True
-    DRAGONS = [18673980, 83489514]  # List of id's for users which have sudo access to the bot.
+    SUDO_USERS = [18673980, 83489514]  # List of id's for users which have sudo access to the bot.
     LOAD = []
     NO_LOAD = ['translation']
 ```
 
 If you can't have a config.py file (EG on Heroku), it is also possible to use environment variables.
-So just go and read the config sample file. 
+The following env variables are supported:
+ - `ENV`: Setting this to ANYTHING will enable env variables
+
+ - `TOKEN`: Your bot token, as a string.
+ - `OWNER_ID`: An integer of consisting of your owner ID
+ - `OWNER_USERNAME`: Your username
+
+ - `DATABASE_URL`: Your database URL
+ - `JOIN_LOGGER`: optional: a chat where your replied saved messages are stored, to stop people deleting their old 
+ - `LOAD`: Space-separated list of modules you would like to load
+ - `NO_LOAD`: Space-separated list of modules you would like NOT to load
+ - `WEBHOOK`: Setting this to ANYTHING will enable webhooks when in env mode
+ messages
+ - `URL`: The URL your webhook should connect to (only needed for webhook mode)
+
+ - `SUDO_USERS`: A space-separated list of user_ids which should be considered sudo users
+ - `SUPPORT_USERS`: A space-separated list of user_ids which should be considered support users (can gban/ungban,
+ nothing else)
+ - `WHITELIST_USERS`: A space-separated list of user_ids which should be considered whitelisted - they can't be banned.
+ - `DONATION_LINK`: Optional: link where you would like to receive donations.
+ - `CERT_PATH`: Path to your webhook certificate
+ - `PORT`: Port to use for your webhooks
+ - `DEL_CMDS`: Whether to delete commands from users which don't have rights to use that command
+ - `STRICT_GBAN`: Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.
+ - `WORKERS`: Number of threads to use. 8 is the recommended (and default) amount, but your experience may vary.
+ __Note__ that going crazy with more threads wont necessarily speed up your bot, given the large amount of sql data 
+ accesses, and the way python asynchronous calls work.
+ - `BAN_STICKER`: Which sticker to use when banning people.
+ - `ALLOW_EXCL`: Whether to allow using exclamation marks ! for commands as well as /.
 
   ### Python dependencies
 
@@ -135,7 +171,7 @@ All that is needed is that your .py file is in the modules folder.
 
 To add commands, make sure to import the dispatcher via
 
-`from KURUMIBOT import dispatcher`.
+`from SaitamaRobot import dispatcher`.
 
 You can then add commands using the usual
 
@@ -155,20 +191,23 @@ through the `/stats` command, which is only available to the bot owner.
 
 Once you've set up your database and your configuration is complete, simply run the bat file(if on windows) or run (Linux):
 
-`python3 -m KURUMIBOT`
+`python3 -m BERU_MA_BOT`
 
 You can use [nssm](https://nssm.cc/usage) to install the bot as service on windows and set it to restart on /gitpull 
 Make sure to edit the start and restart bats to your needs. 
 Note: the restart bat requires that User account control be disabled.
 
-
+For queries or any issues regarding the bot please open an issue ticket or visit us at [BERU BOT SUPPORT](https://t.me/BERU_BOT_SUPPORT)
 ## How to setup on Heroku 
 For starters click on this button 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/natsu-dragneel13/KURUMI.git) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/natsu-dragneel13/Berugit) 
 
 
 ## Credits
-The bot is based on the original work done by [gray](https://github.com/natsu-dragneel13) also futher development done by KURUMI Chan creator.
+The bot is based on the original work done by [PaulSonOfLars](https://github.com/PaulSonOfLars)
 This repo was just revamped to suit an Anime-centric community. All original credits go to Paul and his dedication, Without his efforts, this fork would not have been possible!
 
+Any other authorship/credits can be seen through the commits.
+
+Should any be missing kindly let us know at [BERU BOT SUPPORT](https://t.me/BERU_BOT_SUPPORT) or simply submit a pull request on the readme.
