@@ -818,7 +818,7 @@ __handlers__ = [
 ]
 
 __help__ = """
-[Ara Ara ... you want some NSFW unfortunately my owner has closed these commands but If you want I can help to pleasure you](https://telegra.ph/file/72a4ca04f567aac238445.mp4)
+I am so sorry my KING but I don't have the power to use these holy commands!
 """
 
 __mod_name__ = "NSFW"
