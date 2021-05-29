@@ -203,12 +203,12 @@ def start(update: Update, context: CallbackContext):
                              text="🚨 Support 🚨",
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
-                             text="My anime channel ❤",
+                             text="anime channel ❤",
                              url="https://t.me/Mirai_Anime")
                     ], 
                      [
                          InlineKeyboardButton(
-                             text="🔔 Updates of KURUMI 🔔",
+                             text="🔔 Updates of BERU 🔔",
                              url="https://t.me/KURUMIBOT_SUPPORT")
                     ], 
                      [
