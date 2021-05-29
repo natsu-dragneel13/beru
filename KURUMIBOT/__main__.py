@@ -51,29 +51,32 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot. I will use my angel Zafkiel and protect your group. You can find my list of available commands with /help.
+Hello {},My Name is IGRIS
+𝐈 𝐀𝐌 THE ANT KING 𝐅𝐑𝐎𝐌 𝐒𝐎𝐋𝐎 𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆.
+I will help you manage your group.
+TO KNOW MY COMMANDS CLICK /help.
 """
 
 HELP_STRINGS = """
-KURUMI is here! 
-I Use My Powers To Help Admins To Manage Their Groups! 
+BERU is here! 
+I'm THE ANT KING From Solo Leveling,I will help you manage your groups! Have a look at the following for an idea of some of \
+the things I can help you with. 
 *Main* commands available :
  • /help: PM's you this message.
  • /help <module name>: PM's you info about that module.
  • /settings:
    • in PM: will send you your settings for all supported modules.
    • in a group: will redirect you to pm, with all that chat's settings.
-For all command use / [or](https://telegra.ph/file/b1b545eb4877b012eac82.png) ! 
+For all command use / [or](https://telegra.ph/file/fcad0e1cec3b76c630b49.jpg) ! 
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\nKindly use ! for commands if / is not working\n")
 
-TOKISAKI_IMG = "https://telegra.ph/file/99bbcc3b8564804dc2ab0.jpg"
-KURUMI_IMG = "https://telegra.ph/file/e1d87ec2bdac4e3cfe0a4.mp4"
+TOKISAKI_IMG = "https://telegra.ph/file/3e63b36704dcbd7147e4b.jpg"
+KURUMI_IMG = "https://telegra.ph/file/ac39d4e468dd8840d5c96.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-but you don'thabe to do that """
+but you don't have to"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -191,7 +194,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add Kurumi Chan to your group",
+                            text="☑️ Add beru Chan to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -201,7 +204,7 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="My anime channel ❤",
-                             url="https://t.me/Mirai_Anime_En")
+                             url="https://t.me/Mirai_Anime")
                     ], 
                      [
                          InlineKeyboardButton(
@@ -219,7 +222,7 @@ def start(update: Update, context: CallbackContext):
                     
     else:
         update.effective_message.reply_video(
-                KURUMI_IMG, caption=f"Zaphkiel!!!!\nI'm here with my Zaphkiel")
+                KURUMI_IMG, caption=f"MY KING!!!!\nI'm here tell me what should I do")
 
 # for test purposes
 def error_callback(update: Update, context: CallbackContext):
