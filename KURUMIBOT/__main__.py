@@ -51,7 +51,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hello {},My Name is IGRIS
+Hello {},My Name is BERU
 𝐈 𝐀𝐌 THE ANT KING 𝐅𝐑𝐎𝐌 𝐒𝐎𝐋𝐎 𝐋𝐄𝐕𝐄𝐋𝐈𝐍𝐆.
 I will help you manage your group.
 TO KNOW MY COMMANDS CLICK /help.
